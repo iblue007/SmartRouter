@@ -1,0 +1,9 @@
+ext {
+    //fasle:组件模式
+    //true:集成模式 library
+    isModule = true;
+
+    appId = [
+            my: "com.dpzx.my"
+    ]
+}
