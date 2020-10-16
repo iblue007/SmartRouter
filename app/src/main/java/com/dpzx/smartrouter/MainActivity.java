@@ -7,6 +7,10 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
+import com.dpzx.route_compiler.anotation.Route;
+import com.dpzx.router_core.Router;
+
+@Route(path = "/main/MainActivity")
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -17,10 +21,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 try {
-                    Class clazz = Class.forName("com.dpzx.my.MyActivity");
-                    Intent intent = new Intent(MainActivity.this, clazz);
-                    startActivity(intent);
-                } catch (ClassNotFoundException e) {
+//                    Class clazz = Class.forName("com.dpzx.my.MyActivity");
+//                    Intent intent = new Intent(MainActivity.this, clazz);
+//                    startActivity(intent);
+                    Router.getInstance().buile("/my/MainActivity").navigetion(MainActivity.this);
+                } catch (Exception e) {
                     Log.e("zhuang", "未集成，无法跳转");
                 }
             }

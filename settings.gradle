@@ -1,3 +1,5 @@
+include ':router_core'
+include ':route_compiler'
 include ':my'
 include ':app'
 rootProject.name = "SmartRouter"

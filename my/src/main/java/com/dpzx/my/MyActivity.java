@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.dpzx.route_compiler.anotation.Route;
+
+@Route(path = "/my/MainActivity")
 public class MyActivity extends AppCompatActivity {
 
     @Override
